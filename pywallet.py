@@ -55,6 +55,7 @@ import hashlib
 import random
 import urllib
 import math
+from blake8 import BLAKE
 
 try:
 	from twisted.internet import reactor
@@ -1194,7 +1195,8 @@ def long_hex(bytes):
 	return bytes.encode('hex_codec')
 
 def Hash(data):
-	return hashlib.sha256(hashlib.sha256(data).digest()).digest()
+	#return hashlib.sha256(hashlib.sha256(data).digest()).digest()
+        return BLAKE(256).digest(data)
 
 def EncodeBase58Check(secret):
 	hash = Hash(secret)
