@@ -72,7 +72,7 @@ import os.path
 import platform
 
 max_version = 93000
-addrtype = 26
+addrtype = 0
 json_db = {}
 private_keys = []
 private_hex_keys = []
@@ -2641,8 +2641,8 @@ def importprivkey(db, sec, label, reserve, keyishex, verbose=True, addrv=addrtyp
 	addr = public_key_to_bc_address(public_key, addrv)
 
 	if verbose:
-		print "Address (%s): %s"%(aversions[addrv], addr)
-		print "Privkey (%s): %s"%(aversions[addrv], SecretToASecret(secret, compressed))
+		print "Address (%s): %s"%(aversions[26], addr)
+		print "Privkey (%s): %s"%(aversions[26], SecretToASecret(secret, compressed))
 		print "Hexprivkey: %s"%(secret.encode('hex'))
 		print "Hash160: %s"%(bc_address_to_hash_160(addr).encode('hex'))
 		if not compressed:
