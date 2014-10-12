@@ -3,14 +3,13 @@
 pywversion="2.2"
 never_update=False
 
+# BlueDragon747's pywallet.py
+# added Blake hashing and Blakecoin magic and have done basic testing for recovery and dump
+# should also work for Photon
+# https://github.com/BlueDragon747/pywallet
 #
-# jackjack's pywallet.py
-# https://github.com/jackjack-jj/pywallet
-# forked from Joric's pywallet.py
+# forked from jackjack's pywallet.py which was forked from Joric's pywallet.py
 #
-
-
-
 
 beta_version =  ('a' in pywversion.split('-')[0]) or ('b' in pywversion.split('-')[0])
 
