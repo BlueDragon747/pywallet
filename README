@@ -2,7 +2,7 @@ Ported by BlueDragon747 for Blakecoin/Photon
 
 Please Note:
 
-added Blake hashing and Blakecoin magic and have done basic testing for recovery and dump
+added Blake hashing and Blakecoin pubkey version and have done basic testing for recovery and dump
 
 tested both non encrypted and encrypted seems to create a working wallet.dat
 
