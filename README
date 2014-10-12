@@ -1,9 +1,24 @@
 Ported by BlueDragon747 for Blakecoin/Photon
+
 Please Note:
 
 added Blake hashing and Blakecoin magic and have done basic testing for recovery and dump
 
 tested both non encrypted and encrypted seems to create a working wallet.dat
+
+Examples:
+
+Dump on Windows
+python pywallet.py --dumpwallet --otherversion=26 --datadir=C:\pywallet > dump.txt
+
+Recovery on Windows
+python pywallet.py --recover --recov_device C:\pywallet\wallet.dat --recov_size 10Gio --recov_outputdir C:\pywallet\foundkeys
+
+Recovery on Linux
+./pywallet.py --recover --recov_device /pywallet/wallet.dat --recov_size 10Gio --recov_outputdir /pywallet/foundkeys
+
+Encrypted wallets: tested and works fine with encrypted wallets it will prompt for password or you can use the "--passphrase=YourPassword" in the command
+
 
 
 Requirements: Python 2.x, with bsddb and twisted packages
@@ -32,10 +47,6 @@ Options:
                         prints balance of KEY_BALANCE
   --web                 run pywallet web interface
   --port=PORT           port of web interface (defaults to 8989)
-
-
-
-
 
 
 
