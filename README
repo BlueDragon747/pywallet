@@ -1,4 +1,7 @@
-Note: added Blake hashing and Blakecoin magic and have done some testing
+Note: added Blake hashing and Blakecoin magic and have done basic testing for recovery and dump
+
+tested both non encrypted and encrypted seems to create a working wallet.dat
+
 
 Requirements: Python 2.x, with bsddb and twisted packages
 
