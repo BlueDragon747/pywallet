@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-pywversion="2.2"
+pywversion="2.3"
 never_update=False
 
 # BlueDragon747's pywallet.py
@@ -71,8 +71,8 @@ import os
 import os.path
 import platform
 
-max_version = 81000
-addrtype = 0
+max_version = 93000
+addrtype = 26
 json_db = {}
 private_keys = []
 private_hex_keys = []
