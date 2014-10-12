@@ -1196,7 +1196,6 @@ def long_hex(bytes):
 	return bytes.encode('hex_codec')
 
 def Hash(data):
-	#return hashlib.sha256(hashlib.sha256(data).digest()).digest()
         return BLAKE(256).digest(data)
 
 def EncodeBase58Check(secret):
