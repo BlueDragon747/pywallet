@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-pywversion="2.3"
+pywversion="2.2"
 never_update=False
 
 # BlueDragon747's pywallet.py
@@ -1126,11 +1126,6 @@ def public_key_to_bc_address(public_key, v=None):
 		v=addrtype
 	h160 = hash_160(public_key)
 	return hash_160_to_bc_address(h160, v)
-
-def public_key_to_bc_addressb(public_key, v=None):
-    v= 26
-    h160 = hash_160(public_key)
-    return hash_160_to_bc_address(h160, v)
 
 def hash_160_to_bc_address(h160, v=None):
 	if v==None:
@@ -2647,12 +2642,11 @@ def importprivkey(db, sec, label, reserve, keyishex, verbose=True, addrv=addrtyp
 	secret = GetSecret(pkey)
 	private_key = GetPrivKey(pkey, compressed)
 	public_key = GetPubKey(pkey, compressed)
-	addr1 = public_key_to_bc_addressb(public_key, 26)
-        addr = public_key_to_bc_address(public_key, addrv)
+	addr = public_key_to_bc_address(public_key, addrv)
 
 	if verbose:
-		print "Address (%s): %s"%(aversions[26], addr1)
-		print "Privkey (%s): %s"%(aversions[26], SecretToASecret(secret, compressed))
+		print "Address (%s): %s"%(aversions[addrv], addr)
+		print "Privkey (%s): %s"%(aversions[addrv], SecretToASecret(secret, compressed))
 		print "Hexprivkey: %s"%(secret.encode('hex'))
 		print "Hash160: %s"%(bc_address_to_hash_160(addr).encode('hex'))
 		if not compressed:
