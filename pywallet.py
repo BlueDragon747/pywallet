@@ -9,7 +9,6 @@ never_update=False
 # https://github.com/BlueDragon747/pywallet
 #
 # forked from jackjack's pywallet.py which was forked from Joric's pywallet.py
-#
 
 beta_version =  ('a' in pywversion.split('-')[0]) or ('b' in pywversion.split('-')[0])
 
