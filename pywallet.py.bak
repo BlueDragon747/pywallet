@@ -2649,7 +2649,7 @@ def importprivkey(db, sec, label, reserve, keyishex, verbose=True, addrv=addrtyp
 	private_key = GetPrivKey(pkey, compressed)
 	public_key = GetPubKey(pkey, compressed)
 	addr1 = public_key_to_bc_addressb(public_key, 26)
-        addr = public_key_to_bc_address(public_key, addrv)
+    addr = public_key_to_bc_address(public_key, addrv)
 
 	if verbose:
 		print "Address (%s): %s"%(aversions[26], addr1)
