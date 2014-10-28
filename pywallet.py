@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
-pywversion="2.2"
+pywversion="2.2blake"
 never_update=False
 
 # BlueDragon747's pywallet.py
